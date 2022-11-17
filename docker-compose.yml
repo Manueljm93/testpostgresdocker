@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_PASSWORD=P1x4rt_/1437-*
+      - POSTGRES_DB=geo_v4      
+    volumes: 
+      - ./data/pgsql:/var/lib/postgresql/data
+      - ./postgres/geo_dump.sql:/docker-entrypoint-initdb.d/geo_dump.sql
+    #user: postgres
+    #volumes:
+    #  - ./data/pgsql:/var/lib/postgresql/data/  
